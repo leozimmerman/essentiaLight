@@ -8,11 +8,11 @@
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.OleoLab.EssentiaPlugin</string>
+    <string>com.OleoLab.EssentiaLight</string>
     <key>CFBundleName</key>
-    <string>EssentiaPlugin</string>
+    <string>EssentiaLight</string>
     <key>CFBundleDisplayName</key>
-    <string>EssentiaPlugin</string>
+    <string>EssentiaLight</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
@@ -29,17 +29,17 @@
     <array>
       <dict>
         <key>name</key>
-        <string>Oleo Lab: Essentia Plugin</string>
+        <string>Oleo Lab: Essentia Light</string>
         <key>description</key>
-        <string>Essentia analyzer with OSC data sending</string>
+        <string>Essentia analyzer light version</string>
         <key>factoryFunction</key>
-        <string>EssentiaPluginAUFactory</string>
+        <string>EssentiaLightAUFactory</string>
         <key>manufacturer</key>
-        <string>Manu</string>
+        <string>Oleo</string>
         <key>type</key>
         <string>aufx</string>
         <key>subtype</key>
-        <string>Bhba</string>
+        <string>Bhbb</string>
         <key>version</key>
         <integer>65536</integer>
         <key>resourceUsage</key>

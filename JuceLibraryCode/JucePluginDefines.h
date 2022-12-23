@@ -38,10 +38,10 @@
  #define JucePlugin_Enable_IAA             0
 #endif
 #ifndef  JucePlugin_Name
- #define JucePlugin_Name                   "Essentia Plugin"
+ #define JucePlugin_Name                   "Essentia Light"
 #endif
 #ifndef  JucePlugin_Desc
- #define JucePlugin_Desc                   "Essentia analyzer with OSC data sending"
+ #define JucePlugin_Desc                   "Essentia analyzer light version"
 #endif
 #ifndef  JucePlugin_Manufacturer
  #define JucePlugin_Manufacturer           "Oleo Lab"
@@ -53,10 +53,10 @@
  #define JucePlugin_ManufacturerEmail      ""
 #endif
 #ifndef  JucePlugin_ManufacturerCode
- #define JucePlugin_ManufacturerCode       0x4d616e75
+ #define JucePlugin_ManufacturerCode       0x4f6c656f
 #endif
 #ifndef  JucePlugin_PluginCode
- #define JucePlugin_PluginCode             0x42686261
+ #define JucePlugin_PluginCode             0x42686262
 #endif
 #ifndef  JucePlugin_IsSynth
  #define JucePlugin_IsSynth                0
@@ -98,16 +98,16 @@
  #define JucePlugin_AUSubType              JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_AUExportPrefix
- #define JucePlugin_AUExportPrefix         EssentiaPluginAU
+ #define JucePlugin_AUExportPrefix         EssentiaLightAU
 #endif
 #ifndef  JucePlugin_AUExportPrefixQuoted
- #define JucePlugin_AUExportPrefixQuoted   "EssentiaPluginAU"
+ #define JucePlugin_AUExportPrefixQuoted   "EssentiaLightAU"
 #endif
 #ifndef  JucePlugin_AUManufacturerCode
  #define JucePlugin_AUManufacturerCode     JucePlugin_ManufacturerCode
 #endif
 #ifndef  JucePlugin_CFBundleIdentifier
- #define JucePlugin_CFBundleIdentifier     com.OleoLab.EssentiaPlugin
+ #define JucePlugin_CFBundleIdentifier     com.OleoLab.EssentiaLight
 #endif
 #ifndef  JucePlugin_RTASCategory
  #define JucePlugin_RTASCategory           0
@@ -125,7 +125,7 @@
  #define JucePlugin_RTASDisableMultiMono   0
 #endif
 #ifndef  JucePlugin_AAXIdentifier
- #define JucePlugin_AAXIdentifier          com.OleoLab.EssentiaPlugin
+ #define JucePlugin_AAXIdentifier          com.OleoLab.EssentiaLight
 #endif
 #ifndef  JucePlugin_AAXManufacturerCode
  #define JucePlugin_AAXManufacturerCode    JucePlugin_ManufacturerCode
@@ -149,7 +149,7 @@
  #define JucePlugin_IAASubType             JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_IAAName
- #define JucePlugin_IAAName                "Oleo Lab: Essentia Plugin"
+ #define JucePlugin_IAAName                "Oleo Lab: Essentia Light"
 #endif
 #ifndef  JucePlugin_VSTNumMidiInputs
  #define JucePlugin_VSTNumMidiInputs       16
