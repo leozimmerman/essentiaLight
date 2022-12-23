@@ -116,7 +116,7 @@ float ofxAudioAnalyzer::getValue(ofxAAValue valueType, int channel, float smooth
     return channelAnalyzerUnits[channel]->getValue(valueType, smooth, normalized);
 }
 //-------------------------------------------------------
-float ofxAudioAnalyzer::getAverageValue(ofxAAValue valueType, float smooth, bool normalized) const {
+float ofxAudioAnalyzer:: getAverageValue(ofxAAValue valueType, float smooth, bool normalized) const {
     auto size = channelAnalyzerUnits.size();
     if (size <= 0){
         juce::Logger::outputDebugString("ofxAudioAnalyzer: channel for getting value is incorrect.");
@@ -142,25 +142,25 @@ vector<float>& ofxAudioAnalyzer::getValues(ofxAABinsValue valueType, int channel
     
 }
 //-------------------------------------------------------
-bool ofxAudioAnalyzer::getOnsetValue(int channel) const {
-    
-    if (channel >= _channels){
-        juce::Logger::outputDebugString("ofxAudioAnalyzer: channel for getting value is incorrect.");
-        return false;
-    }
-    return channelAnalyzerUnits[channel]->getValue(ONSETS, 0.0, false);
-}
+//bool ofxAudioAnalyzer::getOnsetValue(int channel) const {
+//    
+//    if (channel >= _channels){
+//        juce::Logger::outputDebugString("ofxAudioAnalyzer: channel for getting value is incorrect.");
+//        return false;
+//    }
+//    return channelAnalyzerUnits[channel]->getValue(ONSETS, 0.0, false);
+//}
 
 //-------------------------------------------------------
-void ofxAudioAnalyzer::resetOnsets(int channel){
-    
-    if (channel >= _channels){
-        juce::Logger::outputDebugString("ofxAudioAnalyzer: channel for getting value is incorrect.");
-        return;
-    }
-    
-    channelAnalyzerUnits[channel]->getOnsetsPtr()->reset();
-}
+//void ofxAudioAnalyzer::resetOnsets(int channel){
+//    
+//    if (channel >= _channels){
+//        juce::Logger::outputDebugString("ofxAudioAnalyzer: channel for getting value is incorrect.");
+//        return;
+//    }
+//    
+//    channelAnalyzerUnits[channel]->getOnsetsPtr()->reset();
+//}
 //-------------------------------------------------------
 void ofxAudioAnalyzer::setMaxEstimatedValue(int channel, ofxAAValue valueType, float value){
     
@@ -183,18 +183,18 @@ void ofxAudioAnalyzer::setMaxEstimatedValue(int channel, ofxAABinsValue valueTyp
     channelAnalyzerUnits[channel]->setMaxEstimatedValue(valueType, value);
 }
 //-------------------------------------------------------
-void ofxAudioAnalyzer::setOnsetsParameters(int channel, float alpha, float silenceTresh, float timeTresh, bool useTimeTresh){
-    
-    if (channel >= _channels){
-        juce::Logger::outputDebugString("ofxAudioAnalyzer: channel for getting value is incorrect.");
-        return;
-    }
-    auto onsets =  channelAnalyzerUnits[channel]->getOnsetsPtr();
-    onsets->setOnsetAlpha(alpha);
-    onsets->setOnsetSilenceThreshold(silenceTresh);
-    onsets->setOnsetTimeThreshold(timeTresh);
-    onsets->setUseTimeThreshold(useTimeTresh);
-}
+//void ofxAudioAnalyzer::setOnsetsParameters(int channel, float alpha, float silenceTresh, float timeTresh, bool useTimeTresh){
+//    
+//    if (channel >= _channels){
+//        juce::Logger::outputDebugString("ofxAudioAnalyzer: channel for getting value is incorrect.");
+//        return;
+//    }
+//    auto onsets =  channelAnalyzerUnits[channel]->getOnsetsPtr();
+//    onsets->setOnsetAlpha(alpha);
+//    onsets->setOnsetSilenceThreshold(silenceTresh);
+//    onsets->setOnsetTimeThreshold(timeTresh);
+//    onsets->setUseTimeThreshold(useTimeTresh);
+//}
 //-------------------------------------------------------
 void ofxAudioAnalyzer::loadStoredMaxEstimatedValues() {
     map<ofxAAValue, float>::iterator it;

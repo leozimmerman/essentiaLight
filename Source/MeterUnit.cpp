@@ -8,38 +8,11 @@
 #include "MeterUnit.h"
 #include "StringUtils.h"
 
-vector<ofxAAValue> availableValues {
+vector<ofxAAValue> availableValuesList {
+    ///*** LIGHT
     RMS,
     POWER,
-    ZERO_CROSSING_RATE,
-    LOUDNESS,
-    
-    PITCH_YIN_FREQUENCY,
-    PITCH_YIN_CONFIDENCE,
-    
-    DISSONANCE,
-    HFC,
-    PITCH_SALIENCE,
-    
-    INHARMONICITY,
-    ODD_TO_EVEN,
-    STRONG_PEAK,
-
-    SILENCE_RATE_20dB,
-    SILENCE_RATE_30dB,
-    SILENCE_RATE_60dB,
-    
-    ENERGY_BAND_LOW,
-    ENERGY_BAND_MID_LOW,
-    ENERGY_BAND_MID_HI,
-    ENERGY_BAND_HI,
-    
-    SPECTRAL_ROLLOFF,
-    SPECTRAL_ENERGY,
-    SPECTRAL_ENTROPY,
-    SPECTRAL_CENTROID,
-    SPECTRAL_COMPLEXITY,
-    SPECTRAL_FLUX
+    LOUDNESS
 };
 
 MeterUnit::MeterUnit(int idx) {
@@ -77,7 +50,7 @@ unique_ptr<juce::AudioProcessorParameterGroup> MeterUnit::getParameterGroup() {
     auto generator = std::make_unique<juce::AudioProcessorParameterGroup>(meterId, TRANS (meterId), "|");
     
     auto options = juce::StringArray ("-NONE-");
-    for (auto ofxaaValue : availableValues) {
+    for (auto ofxaaValue : availableValuesList) {
         auto name = utils::valueTypeToString(ofxaaValue);
         options.add(name);
     }
@@ -102,8 +75,8 @@ void MeterUnit::parameterChanged (const juce::String& param, float value)
             setOfxaaValue(NONE);
         } else {
             int index = value - 1;
-            if (index < availableValues.size()) {
-                auto value = availableValues[index];
+            if (index < availableValuesList.size()) {
+                auto value = availableValuesList[index];
                 setOfxaaValue(value);
             }
         }

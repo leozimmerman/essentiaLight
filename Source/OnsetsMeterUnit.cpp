@@ -111,12 +111,12 @@ string OnsetsMeterUnit::getTypeName() {
     return utils::valueTypeToString(currentOfxaaValue);
 }
 
-void OnsetsMeterUnit::updateOnsetPtr() {
-    auto ptrs = _audioAnalyzer->getChannelAnalyzersPtrs();
-    if (ptrs.size() == 0) return;
-    auto channelUnit = ptrs[0];
-    onsetPtr = channelUnit->getOnsetsPtr();
-}
+//void OnsetsMeterUnit::updateOnsetPtr() {
+//    auto ptrs = _audioAnalyzer->getChannelAnalyzersPtrs();
+//    if (ptrs.size() == 0) return;
+//    auto channelUnit = ptrs[0];
+//    onsetPtr = channelUnit->getOnsetsPtr();
+//}
 
 void OnsetsMeterUnit::setOfxaaValue(ofxAAValue value) {
     currentOfxaaValue = value;

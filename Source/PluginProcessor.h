@@ -71,7 +71,6 @@ private:
     MeterUnit unit2 = MeterUnit(2);
     MeterUnit unit3 = MeterUnit(3);
     vector<MeterUnit*> meterUnits { &unit0, &unit1, &unit2, &unit3 };
-    OnsetsMeterUnit onsetsMeterUnit = OnsetsMeterUnit(99);
  
     juce::AudioProcessorValueTreeState treeState;
     OscManager oscManager;

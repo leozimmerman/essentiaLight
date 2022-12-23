@@ -64,7 +64,7 @@ public:
     void setMaxEstimatedValue(ofxAAValue valueType, float value);
     void setMaxEstimatedValue(ofxAABinsValue valueType, float value);
     
-    ofxAAOnsetsAlgorithm* getOnsetsPtr(){ return network->getOnsetsPtr();}
+    //ofxAAOnsetsAlgorithm* getOnsetsPtr(){ return network->getOnsetsPtr();}
     ofxAABaseAlgorithm* getAlgorithmWithType(ofxAAValue valueType){ return network->getAlgorithmWithType(valueType); };
     ofxAAOneVectorOutputAlgorithm* getAlgorithmWithType(ofxAABinsValue valueType) { return network->getAlgorithmWithType(valueType); };
     

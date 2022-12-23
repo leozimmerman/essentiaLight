@@ -55,14 +55,14 @@ class ofxAudioAnalyzer{
     vector<float>& getValues(ofxAABinsValue valueType, int channel, float smooth, bool normalized);
     
     ///Returns if there is an onset in the speciefied channel.
-    bool getOnsetValue(int channel) const;
+    //bool getOnsetValue(int channel) const;
     
     ///Pointers for the audio analyzing units.
     ///Use very carefully!
     vector<ofxAudioAnalyzerUnit*>& getChannelAnalyzersPtrs(){return channelAnalyzerUnits;}
     
     ///Resets onsetsr detections buffer
-    void resetOnsets(int channel);
+    //void resetOnsets(int channel);
     
     ///Set max estimated values for algorithms that are not normalized
     void setMaxEstimatedValue(int channel, ofxAAValue valueType, float value);

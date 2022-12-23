@@ -10,15 +10,13 @@
 #include "PluginEditor.h"
 #include "StringUtils.h"
 
-juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout(const vector<MeterUnit*>* meterUnits, OnsetsMeterUnit* onsetsMeterUnit)
+juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout(const vector<MeterUnit*>* meterUnits)
 {
     juce::AudioProcessorValueTreeState::ParameterLayout layout;
     for (auto unit: *meterUnits) {
         auto generator = unit->getParameterGroup();
         layout.add (std::move (generator));
     }
-    auto onsetsGenerator = onsetsMeterUnit->getParameterGroup();
-    layout.add(std::move (onsetsGenerator));
     
     auto oscGenerator = std::make_unique<juce::AudioProcessorParameterGroup>("OSC", TRANS ("OSC"), "|");
     oscGenerator->addChild(std::make_unique<juce::AudioParameterInt>(IDs::oscPort,            // parameterID
@@ -43,7 +41,7 @@ EssentiaPluginAudioProcessor::EssentiaPluginAudioProcessor()
                      #endif
                        ),
 #endif
-treeState (*this, nullptr, "PARAMETERS", createParameterLayout(&meterUnits, &onsetsMeterUnit))
+treeState (*this, nullptr, "PARAMETERS", createParameterLayout(&meterUnits))
 {
     
     audioAnalyzer.setup(44100, 1024, 1); ///*** this can be polished
@@ -51,7 +49,6 @@ treeState (*this, nullptr, "PARAMETERS", createParameterLayout(&meterUnits, &ons
     for (auto unit: meterUnits) {
         unit->setup(&magicState, &treeState, &audioAnalyzer);
     }
-    onsetsMeterUnit.setup(&magicState, &treeState, &audioAnalyzer);
     treeState.addParameterListener (IDs::oscPort, this);
     magicState.setGuiValueTree (BinaryData::magic_xml, BinaryData::magic_xmlSize);
     
@@ -70,7 +67,7 @@ void EssentiaPluginAudioProcessor::prepareToPlay (double sampleRate, int samples
     for (auto unit: meterUnits) {
         unit->prepareToPlay(sampleRate, samplesPerBlock);
     }
-    onsetsMeterUnit.prepareToPlay(sampleRate, samplesPerBlock);
+    ///*** onsetsMeterUnit.prepareToPlay(sampleRate, samplesPerBlock);
     magicState.prepareOscData();
     magicState.prepareToPlay (sampleRate, samplesPerBlock);
 }
@@ -90,7 +87,7 @@ void EssentiaPluginAudioProcessor::processBlock (juce::AudioBuffer<float>& buffe
     for (auto unit: meterUnits) {
         unit->process();
     }
-    onsetsMeterUnit.process();
+    ///*** onsetsMeterUnit.process();
     sendOscData();
 }
 //==============================================================================
@@ -120,9 +117,9 @@ void EssentiaPluginAudioProcessor::sendOscData() {
         }
     }
      
-    if (onsetsMeterUnit.isEnabled()) {
-        oscManager.sendValue(onsetsMeterUnit.getValue(), onsetsMeterUnit.getTypeName());
-    }
+//    if (onsetsMeterUnit.isEnabled()) {
+//        oscManager.sendValue(onsetsMeterUnit.getValue(), onsetsMeterUnit.getTypeName());
+//    }
 }
 
 void EssentiaPluginAudioProcessor::postSetStateInformation() {

@@ -54,7 +54,7 @@ namespace ofxaa {
         void setMaxEstimatedValue(ofxAAValue valueType, float value);
         void setMaxEstimatedValue(ofxAABinsValue valueType, float value);
         
-        ofxAAOnsetsAlgorithm* getOnsetsPtr(){ return onsets;}
+        //ofxAAOnsetsAlgorithm* getOnsetsPtr(){ return onsets;}
         
         ofxAABaseAlgorithm* getAlgorithmWithType(ofxAAValue valueType);
         ofxAAOneVectorOutputAlgorithm* getAlgorithmWithType(ofxAABinsValue valueType);
@@ -75,95 +75,9 @@ namespace ofxaa {
         vector<ofxAABaseAlgorithm*> algorithms;
         
         ofxAAOneVectorOutputAlgorithm* dcRemoval;
-        ofxAAOneVectorOutputAlgorithm* windowing;
-        
-        ofxAAOneVectorOutputAlgorithm* equalLoudness;
-        
         ofxAASingleOutputAlgorithm* rms;
         ofxAASingleOutputAlgorithm* power;
-        ofxAASingleOutputAlgorithm* strongDecay;
-        ofxAASingleOutputAlgorithm* zeroCrossingRate;
         ofxAASingleOutputAlgorithm* loudness;
-        ofxAASingleOutputAlgorithm* loudnessVickers;
-        ofxAAOneVectorOutputAlgorithm* silenceRate;
-        
-        ofxAAOneVectorOutputAlgorithm* centralMoments;
-        ofxAASingleOutputAlgorithm* sfx_decrease;
-        ofxAADistributionShapeAlgorithm* distributionShape;
-        ofxAAOneVectorOutputAlgorithm* derivativeSFX;
-        ofxAAOneVectorOutputAlgorithm* envelope;
-        ofxAAOneVectorOutputAlgorithm* envelope_acummulated;
-        ofxAASingleOutputAlgorithm* flatnessSFX;
-        ofxAAOneVectorOutputAlgorithm* logAttackTime;
-        ofxAASingleOutputAlgorithm* maxToTotal;
-        ofxAASingleOutputAlgorithm* tcToTotal;
-        
-        ofxAAOneVectorOutputAlgorithm* spectrum;
-        ofxAANSGConstantQAlgorithm* nsgConstantQ;
-        //ofxAATwoVectorsOutputAlgorithm* mfcc;
-        
-        ofxAAOneVectorOutputAlgorithm* melBands;
-        ofxAAOneVectorOutputAlgorithm* melBands_centralMoments;
-        ofxAADistributionShapeAlgorithm* melBands_distributionShape;
-        ofxAASingleOutputAlgorithm* melBands_flatnessDb;
-        ofxAASingleOutputAlgorithm* melBands_crest;
-        
-        ofxAATwoVectorsOutputAlgorithm* gfcc;
-        ofxAAOneVectorOutputAlgorithm* erbBands_centralMoments;
-        ofxAADistributionShapeAlgorithm* erbBands_distributionShape;
-        ofxAASingleOutputAlgorithm* erbBands_flatnessDb;
-        ofxAASingleOutputAlgorithm* erbBands_crest;
-        
-        ofxAAOneVectorOutputAlgorithm* barkBands;
-        ofxAAOneVectorOutputAlgorithm* barkBands_centralMoments;
-        ofxAADistributionShapeAlgorithm* barkBands_distributionShape;
-        ofxAASingleOutputAlgorithm* barkBands_flatnessDb;
-        ofxAASingleOutputAlgorithm* barkBands_crest;
-        
-        ofxAAOneVectorOutputAlgorithm* unaryOperator_square;
-        ofxAASingleOutputAlgorithm* spectral_decrease;
-        
-        ofxAASingleOutputAlgorithm* rollOff;
-        ofxAASingleOutputAlgorithm* spectral_energy;
-        
-        ofxAASingleOutputAlgorithm* ebr_low;
-        ofxAASingleOutputAlgorithm* ebr_mid_low;
-        ofxAASingleOutputAlgorithm* ebr_mid_hi;
-        ofxAASingleOutputAlgorithm* ebr_hi;
-        
-        ofxAASingleOutputAlgorithm* hfc;
-        ofxAASingleOutputAlgorithm* spectral_flux;
-        ofxAASingleOutputAlgorithm* strongPeak;
-        ofxAASingleOutputAlgorithm* spectralComplexity;
-        ofxAASingleOutputAlgorithm* pitchSalience;
-        ofxAATwoVectorsOutputAlgorithm* spectralPeaks;
-        ofxAASingleOutputAlgorithm* dissonance;
-        ofxAASingleOutputAlgorithm* spectral_entropy;
-        ofxAASingleOutputAlgorithm* spectral_centroid;
-        
-        ofxAAOneVectorOutputAlgorithm* spectral_centralMoments;
-        ofxAADistributionShapeAlgorithm* spectral_distributionShape;
-        
-        ofxAAOneVectorOutputAlgorithm* dynamicComplexity;
-        
-        ofxAATwoVectorsOutputAlgorithm* harmonicPeaks;
-        ofxAASingleOutputAlgorithm* oddToEven;
-        ofxAASingleOutputAlgorithm* inharmonicity;
-        ofxAAOneVectorOutputAlgorithm* tristimulus;
-        
-        ofxAAOneVectorOutputAlgorithm* pitchYinFFT;
-        ofxAATwoVectorsOutputAlgorithm* pitchMelodia;
-        ofxAATwoVectorsOutputAlgorithm* predominantPitchMelodia;
-        ofxAAVectorVectorOutputAlgorithm* multiPitchMelodia;
-        ofxAAVectorVectorOutputAlgorithm* multiPitchKlapuri;
-        
-        ofxAATwoVectorsOutputAlgorithm* spectralPeaks_hpcp;
-        ofxAAOneVectorOutputAlgorithm* hpcp;
-        ofxAASingleOutputAlgorithm* hpcp_entropy;
-        ofxAASingleOutputAlgorithm* hpcp_crest;
-        ofxAATwoTypesVectorOutputAlgorithm* chordsDetection;
-        
-        ofxAAOnsetsAlgorithm* onsets;
         
     };
 }
