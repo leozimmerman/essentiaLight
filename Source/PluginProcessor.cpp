@@ -87,7 +87,6 @@ void EssentiaPluginAudioProcessor::processBlock (juce::AudioBuffer<float>& buffe
     for (auto unit: meterUnits) {
         unit->process();
     }
-    ///*** onsetsMeterUnit.process();
     sendOscData();
 }
 //==============================================================================
@@ -116,10 +115,6 @@ void EssentiaPluginAudioProcessor::sendOscData() {
             oscManager.sendValue(unit->getValue(), unit->getTypeName());
         }
     }
-     
-//    if (onsetsMeterUnit.isEnabled()) {
-//        oscManager.sendValue(onsetsMeterUnit.getValue(), onsetsMeterUnit.getTypeName());
-//    }
 }
 
 void EssentiaPluginAudioProcessor::postSetStateInformation() {

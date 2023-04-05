@@ -64,10 +64,6 @@
     </GROUP>
     <GROUP id="{2094C181-A987-B8CA-0C24-B1C939A168AB}" name="Source">
       <FILE id="zdnxFj" name="OscManager.h" compile="0" resource="0" file="Source/OscManager.h"/>
-      <FILE id="l1wk69" name="OnsetsMeterUnit.cpp" compile="1" resource="0"
-            file="Source/OnsetsMeterUnit.cpp"/>
-      <FILE id="A3WQRC" name="OnsetsMeterUnit.h" compile="0" resource="0"
-            file="Source/OnsetsMeterUnit.h"/>
       <FILE id="QFd7Sf" name="MeterUnit.h" compile="0" resource="0" file="Source/MeterUnit.h"/>
       <FILE id="FtOYAH" name="MeterUnit.cpp" compile="1" resource="0" file="Source/MeterUnit.cpp"/>
       <FILE id="TYryDi" name="StringUtils.cpp" compile="1" resource="0" file="Source/StringUtils.cpp"/>

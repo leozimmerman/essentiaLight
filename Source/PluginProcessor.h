@@ -6,12 +6,13 @@
   ==============================================================================
 */
 
+#define VERSION "0.1"
+
 #pragma once
 
 #include <JuceHeader.h>
 #include "ofxAudioAnalyzer.h"
 #include "MeterUnit.h"
-#include "OnsetsMeterUnit.h"
 #include "OscManager.h"
 
 using namespace std;
@@ -70,7 +71,7 @@ private:
     MeterUnit unit1 = MeterUnit(1);
     MeterUnit unit2 = MeterUnit(2);
     MeterUnit unit3 = MeterUnit(3);
-    vector<MeterUnit*> meterUnits { &unit0, &unit1, &unit2, &unit3 };
+    vector<MeterUnit*> meterUnits { &unit0, &unit1, &unit2};
  
     juce::AudioProcessorValueTreeState treeState;
     OscManager oscManager;

@@ -49,10 +49,7 @@ void ofxAudioAnalyzerUnit::analyze(const vector<float> & inBuffer){
         audioBuffer[i] = (Real) inBuffer[i];
     }
     
-    accumulatedAudioBuffer.erase(accumulatedAudioBuffer.begin(), accumulatedAudioBuffer.begin()+inBuffer.size());
-    accumulatedAudioBuffer.insert(accumulatedAudioBuffer.end(), audioBuffer.begin(), audioBuffer.end());
-    
-    network->computeAlgorithms(accumulatedAudioBuffer, accumulatedAudioBuffer);
+    network->computeAlgorithms(audioBuffer);
 }
 
 //--------------------------------------------------------------

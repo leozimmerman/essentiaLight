@@ -37,7 +37,7 @@ namespace ofxaa {
         Network(int sampleRate, int bufferSize);
         ~Network();
         
-        void computeAlgorithms(vector<Real>& signal, vector<Real>& accumulatedSignal);
+        void computeAlgorithms(vector<Real>& signal);
         
         float getValue(ofxAAValue value, float smooth, bool normalized);
         float getValue(ofxAAValue value){ return getValue(value, 0.0, false); }

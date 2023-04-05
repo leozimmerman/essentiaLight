@@ -129,7 +129,7 @@ namespace ofxaa {
     //MARK: - COMPUTE
     
 
-    void Network::computeAlgorithms(vector<Real>& signal, vector<Real>& accumulatedSignal){
+    void Network::computeAlgorithms(vector<Real>& signal){
         _audioSignal = signal;
         for (int i=0; i<algorithms.size(); i++){
             algorithms[i]->compute();
