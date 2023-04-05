@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0253C98B90BDFF7640A724D1"
-               BuildableName = "EssentiaLight.vst3"
+               BuildableName = "EssentiaPlugin.vst3"
                BlueprintName = "EssentiaLight - VST3"
                ReferencedContainer = "container:EssentiaLight.xcodeproj">
             </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0253C98B90BDFF7640A724D1"
-            BuildableName = "EssentiaLight.vst3"
+            BuildableName = "EssentiaPlugin.vst3"
             BlueprintName = "EssentiaLight - VST3"
             ReferencedContainer = "container:EssentiaLight.xcodeproj">
          </BuildableReference>
