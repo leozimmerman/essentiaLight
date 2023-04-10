@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4E29CE3050900286AC91A2C"
-               BuildableName = "EssentiaPlugin.component"
+               BuildableName = "EssentiaLight.component"
                BlueprintName = "EssentiaLight - AU"
                ReferencedContainer = "container:EssentiaLight.xcodeproj">
             </BuildableReference>
@@ -42,8 +42,8 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         BundleIdentifier = "com.cockos.reaper"
-         FilePath = "/Applications/REAPER.app">
+         BundleIdentifier = "com.ableton.live"
+         FilePath = "/Applications/Ableton Live 11 Suite.app">
       </PathRunnable>
    </LaunchAction>
    <ProfileAction
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4E29CE3050900286AC91A2C"
-            BuildableName = "EssentiaPlugin.component"
+            BuildableName = "EssentiaLight.component"
             BlueprintName = "EssentiaLight - AU"
             ReferencedContainer = "container:EssentiaLight.xcodeproj">
          </BuildableReference>
