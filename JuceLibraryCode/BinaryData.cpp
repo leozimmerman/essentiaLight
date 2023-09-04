@@ -87,8 +87,7 @@ static const unsigned char temp_binary_data_0[] =
 "              background-color=\"FF194C6E\"/>\r\n"
 "    </View>\r\n"
 "  </View>\r\n"
-"</magic>\r\n"
-"\0\r\n";
+"</magic>\r\n";
 
 const char* magic_xml = (const char*) temp_binary_data_0;
 
@@ -103,7 +102,7 @@ const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
 
     switch (hash)
     {
-        case 0x7ee40a85:  numBytes = 4269; return magic_xml;
+        case 0x7ee40a85:  numBytes = 4266; return magic_xml;
         default: break;
     }
 
